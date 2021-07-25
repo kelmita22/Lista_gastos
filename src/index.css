@@ -12,7 +12,7 @@
 }
 
 body {
-  background: #F9F9F9;
+  background: black;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 60rem){ /* 950px */
+@media screen and (max-width: 60rem){
   :root {
       font-size: 0.875rem;
   }

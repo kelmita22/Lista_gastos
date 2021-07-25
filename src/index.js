@@ -10,22 +10,34 @@ import GastosCategoria from './components/GastosCategoria.jsx';
 import InicioSesion from './components/InicioSesion.jsx';
 import ListaGastos from './components/ListaGastos.jsx';
 import Registro from './components/Registro.jsx';
+import Fondo from './contentcomponents/Fondo';
 
 const Index = () => {
   return (
-    <BrowserRouter>
-      <Contenedor>
-        <Switch>
-          <Route path='inicio-sesion' component={InicioSesion} />
-          <Route path='editar-gastos/:id' component={EditarGastos} />
-          <Route path='gastos-categoria' component={GastosCategoria} />
-          <Route path='lista-gastos' component={ListaGastos} />
-          <Route path='registro' component={Registro} />
-          <Route path='/' component={App} />
-        </Switch>
-        <App />
-      </Contenedor>
-    </BrowserRouter>
+    <div style={{ position: 'relative', overflow: "hidden" }}>
+      <div style={{ position: 'absolute' }}>
+        <Fondo height="100vh" width="100vw" params={Fondo} />
+      </div>
+      <div>
+        <BrowserRouter>
+
+          <Contenedor>
+
+            <Switch>
+
+              <Route path='inicio-sesion' component={InicioSesion} />
+              <Route path='editar-gastos/:id' component={EditarGastos} />
+              <Route path='gastos-categoria' component={GastosCategoria} />
+              <Route path='lista-gastos' component={ListaGastos} />
+              <Route path='registro' component={Registro} />
+              <Route path='/' component={App} />
+            </Switch>
+          </Contenedor>
+
+        </BrowserRouter >
+      </div>
+    </div>
+
   )
     ;
 }
