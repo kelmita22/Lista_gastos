@@ -14,30 +14,27 @@ import Fondo from './contentcomponents/Fondo';
 
 const Index = () => {
   return (
-    <div style={{ position: 'relative', overflow: "hidden" }}>
-      <div style={{ position: 'absolute' }}>
-        <Fondo height="100vh" width="100vw" params={Fondo} />
-      </div>
-      <div>
-        <BrowserRouter>
 
-          <Contenedor>
+    <>
 
-            <Switch>
+      <BrowserRouter>
 
-              <Route path='inicio-sesion' component={InicioSesion} />
-              <Route path='editar-gastos/:id' component={EditarGastos} />
-              <Route path='gastos-categoria' component={GastosCategoria} />
-              <Route path='lista-gastos' component={ListaGastos} />
-              <Route path='registro' component={Registro} />
-              <Route path='/' component={App} />
-            </Switch>
-          </Contenedor>
+        <Contenedor>
 
-        </BrowserRouter >
-      </div>
-    </div>
+          <Switch>
 
+            <Route path='/inicio-sesion' component={InicioSesion} />
+            <Route path='/editar-gastos/:id' component={EditarGastos} />
+            <Route path='/gastos-categoria' component={GastosCategoria} />
+            <Route path='/lista-gastos' component={ListaGastos} />
+            <Route path='/registro' component={Registro} />
+            <Route path='/' component={App} />
+          </Switch>
+        </Contenedor>
+
+      </BrowserRouter >
+      <Fondo />
+    </>
   )
     ;
 }
