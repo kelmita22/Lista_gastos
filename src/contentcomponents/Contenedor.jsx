@@ -17,7 +17,7 @@ const Contenedor = styled.div`
     z-index: 100;
  
     @media(max-width: 60rem){
-        height: 95vh;
+        height: 90vh;
         max-height: none;
     }
 `;
