@@ -38,6 +38,7 @@ const Formulario = styled.form`
 `;
 
 const Input = styled.input`
+font-size: 2.5rem;
 height:20px;
 margin:0;
 padding-right: 30px;
