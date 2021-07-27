@@ -11,28 +11,26 @@ import InicioSesion from './components/InicioSesion.jsx';
 import ListaGastos from './components/ListaGastos.jsx';
 import Registro from './components/Registro.jsx';
 import Fondo from './contentcomponents/Fondo';
+import { AuthProvider } from './contextos/AuthContext';
 
 const Index = () => {
   return (
 
     <>
-
-      <BrowserRouter>
-
-        <Contenedor>
-
-          <Switch>
-
-            <Route path='/inicio-sesion' component={InicioSesion} />
-            <Route path='/editar-gastos/:id' component={EditarGastos} />
-            <Route path='/gastos-categoria' component={GastosCategoria} />
-            <Route path='/lista-gastos' component={ListaGastos} />
-            <Route path='/registro' component={Registro} />
-            <Route path='/' component={App} />
-          </Switch>
-        </Contenedor>
-
-      </BrowserRouter >
+      <AuthProvider>
+        <BrowserRouter>
+          <Contenedor>
+            <Switch>
+              <Route path='/inicio-sesion' component={InicioSesion} />
+              <Route path='/editar-gastos/:id' component={EditarGastos} />
+              <Route path='/gastos-categoria' component={GastosCategoria} />
+              <Route path='/lista-gastos' component={ListaGastos} />
+              <Route path='/registro' component={Registro} />
+              <Route path='/' component={App} />
+            </Switch>
+          </Contenedor>
+        </BrowserRouter >
+      </AuthProvider>
       <Fondo />
     </>
   )
