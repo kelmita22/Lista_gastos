@@ -6,7 +6,8 @@ const theme = {
     rojo: '#E34747',
     grisClaro: '#E8EFF1',
     grisClaro2: '#CBDDE2',
-    azulClaro: '#8792F1'
+    azulClaro: '#8792F1',
+    black: '#000000'
 }
 
 export default theme

@@ -12,6 +12,8 @@ import ListaGastos from './components/ListaGastos.jsx';
 import Registro from './components/Registro.jsx';
 import Fondo from './contentcomponents/Fondo';
 import { AuthProvider } from './contextos/AuthContext';
+import RutaProtegida from './components/RutaPrivada';
+
 
 const Index = () => {
   return (
@@ -22,11 +24,19 @@ const Index = () => {
           <Contenedor>
             <Switch>
               <Route path='/inicio-sesion' component={InicioSesion} />
-              <Route path='/editar-gastos/:id' component={EditarGastos} />
-              <Route path='/gastos-categoria' component={GastosCategoria} />
-              <Route path='/lista-gastos' component={ListaGastos} />
               <Route path='/registro' component={Registro} />
-              <Route path='/' component={App} />
+              <RutaProtegida path='/gastos-categoria'>
+                <GastosCategoria />
+              </RutaProtegida>
+              <RutaProtegida path='/lista-gastos'>
+                <ListaGastos />
+              </RutaProtegida>
+              <RutaProtegida path='/editar-gastos/:id'>
+                <EditarGastos />
+              </RutaProtegida>
+              <RutaProtegida path='/'>
+                <App />
+              </RutaProtegida>
             </Switch>
           </Contenedor>
         </BrowserRouter >

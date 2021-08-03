@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Header, Titulo } from '../contentcomponents/Header';
 import Regresar from './../contentcomponents/Regresar'
+import TotalGastado from './TotalGastado';
 
 const GastosCategoria = () => {
     return (
@@ -13,6 +14,7 @@ const GastosCategoria = () => {
                 <Regresar />
                 <Titulo>Gastos por Categoría</Titulo>
             </Header>
+            <TotalGastado />
         </>
     );
 }
