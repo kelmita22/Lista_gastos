@@ -1,2 +1,0 @@
-(this.webpackJsonplista_gastos=this.webpackJsonplista_gastos||[]).push([[0],{10:function(t,n,e){"use strict";e.r(n);e(1);var s=e(3),c=e.n(s),o=(e(8),e(0)),r=function(){return Object(o.jsx)("h1",{children:"Hola Kelly"})},i=function(){return Object(o.jsx)(r,{})};c.a.render(Object(o.jsx)(i,{}),document.getElementById("root"))},8:function(t,n,e){}},[[10,1,2]]]);
-//# sourceMappingURL=main.c856df0f.chunk.js.map
