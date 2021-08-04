@@ -13,6 +13,7 @@ import Registro from './components/Registro.jsx';
 import Fondo from './contentcomponents/Fondo';
 import { AuthProvider } from './contextos/AuthContext';
 import RutaProtegida from './components/RutaPrivada';
+import { TotalGastadoProvider } from './contextos/TotalGastadoMes';
 
 
 const Index = () => {
@@ -20,26 +21,28 @@ const Index = () => {
 
     <>
       <AuthProvider>
-        <BrowserRouter>
-          <Contenedor>
-            <Switch>
-              <Route path='/inicio-sesion' component={InicioSesion} />
-              <Route path='/registro' component={Registro} />
-              <RutaProtegida path='/gastos-categoria'>
-                <GastosCategoria />
-              </RutaProtegida>
-              <RutaProtegida path='/lista-gastos'>
-                <ListaGastos />
-              </RutaProtegida>
-              <RutaProtegida path='/editar-gastos/:id'>
-                <EditarGastos />
-              </RutaProtegida>
-              <RutaProtegida path='/'>
-                <App />
-              </RutaProtegida>
-            </Switch>
-          </Contenedor>
-        </BrowserRouter >
+        <TotalGastadoProvider>
+          <BrowserRouter>
+            <Contenedor>
+              <Switch>
+                <Route path='/inicio-sesion' component={InicioSesion} />
+                <Route path='/registro' component={Registro} />
+                <RutaProtegida path='/gastos-categoria'>
+                  <GastosCategoria />
+                </RutaProtegida>
+                <RutaProtegida path='/lista-gastos'>
+                  <ListaGastos />
+                </RutaProtegida>
+                <RutaProtegida path='/editar-gastos/:id'>
+                  <EditarGastos />
+                </RutaProtegida>
+                <RutaProtegida path='/'>
+                  <App />
+                </RutaProtegida>
+              </Switch>
+            </Contenedor>
+          </BrowserRouter >
+        </TotalGastadoProvider>
       </AuthProvider>
       <Fondo />
     </>

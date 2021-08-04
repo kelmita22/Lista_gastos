@@ -51,6 +51,7 @@ const FormularioGasto = ({ gasto }) => {
             if (cantidad) {
                 if (gasto) {
                     editarGasto({
+                        id: gasto.id,
                         categoria: categoria,
                         descripcion: inputDescripcion,
                         cantidad: cantidad,

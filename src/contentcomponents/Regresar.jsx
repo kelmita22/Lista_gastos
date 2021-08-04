@@ -4,24 +4,24 @@ import { useHistory } from 'react-router-dom';
 
 const Btn = styled.button`
     display: block;
-    width: 3.12rem; /* 50px */
-    height: 3.12rem; /* 50px */
-    line-height: 3.12rem; /* 50px */
+    width: 3.12rem; 
+    height: 3.12rem; 
+    line-height: 3.12rem;
     text-align: center;
-    margin-right: 1.25rem; /* 20px */
+    margin-right: 1.25rem;
     border: none;
     background: #232741;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0.31rem; /* 5px */
+    border-radius: 0.31rem; 
     cursor: pointer;
  
-    @media(max-width: 60rem){ /* 950px */
-        width: 2.5rem; /* 40px */
-        height: 2.5rem; /* 40px */
-        line-height: 2.5rem; /* 40px */
+    @media(max-width: 60rem){ 
+        width: 2.5rem; 
+        height: 2.5rem; 
+        line-height: 2.5rem; 
     }
 `;
 

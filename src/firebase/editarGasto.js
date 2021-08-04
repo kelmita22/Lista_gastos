@@ -1,6 +1,6 @@
 import { db } from './firebaseconfig';
 
-const editarGasto = ({ id, categoria, descripcion, cantidad, fecha, uidUsuario }) => {
+const editarGasto = ({ id, categoria, descripcion, cantidad, fecha }) => {
     return db.collection('gastos').doc(id).update({
         categoria: categoria,
         descripcion: descripcion,
